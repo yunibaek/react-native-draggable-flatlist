@@ -4,6 +4,8 @@
   "description": "A drag-and-drop-enabled FlatList component for React Native",
   "main": "index.tsx",
   "scripts": {
+    "prepare": "rm -rf built && tsc",
+    "start": "tsc -w --outDir built",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
