@@ -27,7 +27,16 @@
   },
   "homepage": "https://github.com/computerjazz/react-native-draggable-flatlist#readme",
   "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
     "react-native-gesture-handler": "^1.0.0",
     "react-native-reanimated": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.30",
+    "typescript": "^3.7.4",
+    "react": "*",
+    "react-native": "*",
   }
 }
