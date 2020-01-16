@@ -1,14 +1,22 @@
 {
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
-		"jsx": "react-native",
-		"lib": ["dom", "esnext"],
-		"moduleResolution": "node",
-		"noEmit": true,
-		"skipLibCheck": true,
-		"resolveJsonModule": true,
-		"forceConsistentCasingInFileNames": true,
+		"module":"es2015",
+		"target": "es2015",
+		"jsx": "react",
+		"rootDir": "src",
 		"outDir": "built",
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"preserveConstEnums": true,
+		"allowJs": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"skipLibCheck": true,
+		"moduleResolution":"Node"
 	},
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "built"],
+	"include": ["./src"]
 }
