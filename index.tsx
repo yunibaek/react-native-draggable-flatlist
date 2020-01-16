@@ -276,7 +276,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
       console.log("## Can't set multiple active items")
     } else {
       this.isPressedIn.js = true
-
+      // @ts-ignore
       this.setState({
         activeKey,
         hoverComponent,
@@ -426,6 +426,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
         offset: 0,
       },
     }
+    // @ts-ignore
     this.cellData.set(key, cellData)
   }
 
@@ -443,6 +444,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
       const ref = this.cellRefs.get(key)
 
       const noRef = !ref
+      // @ts-ignore
       const invalidRef = !noRef && !(ref.current && ref.current._component)
       if (noRef || invalidRef) {
         let reason = noRef ? "no ref" : "invalid ref"
@@ -450,7 +452,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
         this.queue.push(() => this.measureCell(key))
         return resolve()
       }
-
+      // @ts-ignore
       ref.current._component.measureLayout(findNodeHandle(this.flatlistRef.current), (x, y, w, h) => {
         const { activeKey } = this.state
         const isHovering = activeKey !== null
@@ -507,6 +509,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
     this.targetScrollOffset.setValue(offset)
     this.isAutoscrolling.native.setValue(1)
     this.isAutoscrolling.js = true
+    // @ts-ignore
     this.flatlistRef.current._component.scrollToOffset({ offset })
   })
 
@@ -722,6 +725,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
         keyToIndex={this.keyToIndex}
         renderItem={renderItem}
         item={item}
+        // @ts-ignore
         drag={this.drag}
         onUnmount={onUnmount}
       />
@@ -757,6 +761,7 @@ class DraggableFlatList<T> extends React.Component<Props<T>, State> {
             onHandlerStateChange={onCellTap}
           >
             <Animated.View
+            // @ts-ignore
               ref={ref}
               onLayout={onCellLayout}
               style={isActiveCell ? { opacity: 0 } : undefined}
