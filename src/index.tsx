@@ -65,6 +65,7 @@ const defaultAnimationConfig = {
 }
 
 const debugGestureState = (state, context) => {
+  // @ts-ignore
   const stateStr = Object.entries(GestureState).find(([k, v]) => v === state)
   console.log(`## ${context} debug gesture state: ${state} - ${stateStr}`)
 }
