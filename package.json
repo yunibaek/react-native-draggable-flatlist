@@ -43,7 +43,5 @@
     "react-native-reanimated": "^1.6.0",
     "typescript": "^3.7.4"
   },
-  "dependencies": {
-    "react-native-iphone-x-helper": "^1.2.1"
-  }
+  "dependencies": {}
 }
